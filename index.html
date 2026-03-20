@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhysicsHub - Premier Coaching Classes in Kandivali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4F46E5',
+                        secondary: '#10B981',
+                        accent: '#F59E0B',
+                        dark: '#1F2937',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #4F46E5 0%, #10B981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-pattern {
+            background-image: radial-gradient(circle at 1px 1px, rgba(79, 70, 229, 0.15) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                        P
+                    </div>
+                    <span class="text-2xl font-bold text-gray-900">physics<span class="text-primary">Hub</span></span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-700 hover:text-primary font-medium transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-primary font-medium transition">About</a>
+                    <a href="#courses" class="text-gray-700 hover:text-primary font-medium transition">Courses</a>
+                    <a href="#faculty" class="text-gray-700 hover:text-primary font-medium transition">Faculty</a>
+                    <a href="#contact" class="bg-primary text-white px-6 py-2.5 rounded-full font-medium hover:bg-indigo-700 transition shadow-lg hover:shadow-xl">Enquire Now</a>
+                </div>
+
+                <button class="md:hidden text-gray-700 hover:text-primary" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-primary font-medium">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-primary font-medium">About</a>
+                <a href="#courses" class="block px-3 py-2 text-gray-700 hover:text-primary font-medium">Courses</a>
+                <a href="#faculty" class="block px-3 py-2 text-gray-700 hover:text-primary font-medium">Faculty</a>
+                <a href="#contact" class="block px-3 py-2 text-primary font-bold">Enquire Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden hero-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-indigo-100 text-primary font-semibold text-sm">
+                        <span class="w-2 h-2 bg-primary rounded-full mr-2 animate-pulse"></span>
+                        Now Enrolling for 2024-25
+                    </div>
+                    <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight text-gray-900">
+                        Master Science & Maths with <span class="gradient-text">Kandivali's Best</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 leading-relaxed max-w-lg">
+                        Premium coaching classes for 8th to 12th standard students. Expert faculty, personalized attention, and proven results in Physics, Chemistry, Biology & Mathematics.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-primary rounded-full hover:bg-indigo-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            Join Now
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#courses" class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-gray-700 bg-white border-2 border-gray-200 rounded-full hover:border-primary hover:text-primary transition">
+                            Explore Courses
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4">
+                        <div class="flex -space-x-2">
+                            <div class="w-10 h-10 rounded-full bg-gray-300 border-2 border-white flex items-center justify-center text-xs font-bold text-gray-600">A+</div>
+                            <div class="w-10 h-10 rounded-full bg-gray-400 border-2 border-white flex items-center justify-center text-xs font-bold text-gray-600">95%</div>
+                            <div class="w-10 h-10 rounded-full bg-gray-500 border-2 border-white flex items-center justify-center text-xs font-bold text-white">100%</div>
+                        </div>
+                        <p class="text-sm font-medium text-gray-600">500+ Students Excelled</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-3xl transform rotate-3 opacity-20"></div>
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Students studying" class="relative rounded-3xl shadow-2xl w-full object-cover h-[500px]">
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                                <i class="fas fa-check text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900">98% Success Rate</p>
+                                <p class="text-sm text-gray-500">Board Exam Results</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white border-y">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-2">
+                    <p class="text-4xl font-bold text-primary">10+</p>
+                    <p class="text-gray-600 font-medium">Years Experience</p>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-4xl font-bold text-secondary">500+</p>
+                    <p class="text-gray-600 font-medium">Students Trained</p>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-4xl font-bold text-accent">4</p>
+                    <p class="text-gray-600 font-medium">Expert Faculty</p>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-4xl font-bold text-purple-600">95%</p>
+                    <p class="text-gray-600 font-medium">Board Score Average</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose PhysicsHub?</h2>
+                <p class="text-lg text-gray-600">Located in the heart of Kandivali, we provide comprehensive coaching that transforms students into achievers through conceptual clarity and rigorous practice.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition border border-gray-100">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center text-primary text-2xl mb-6">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Expert Faculty</h3>
+                    <p class="text-gray-600">Learn from the best educators in Kandivali with years of experience in competitive exam preparation and board exams.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition border border-gray-100">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-secondary text-2xl mb-6">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Small Batch Size</h3>
+                    <p class="text-gray-600">Limited students per batch ensuring personalized attention, individual doubt clearing, and better interaction.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition border border-gray-100">
+                    <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center text-accent text-2xl mb-6">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Regular Testing</h3>
+                    <p class="text-gray-600">Weekly tests, comprehensive study material, and detailed performance analysis to track your progress.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Courses</h2>
+                <p class="text-lg text-gray-600">Comprehensive coaching for all major subjects from 8th to 12th standard</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 8th-9th -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 p-8 text-white hover:shadow-2xl transition transform hover:-translate-y-1">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-white opacity-10 rounded-full"></div>
+                    <h3 class="text-2xl font-bold mb-2">8th & 9th</h3>
+                    <p class="text-blue-100 mb-4">Foundation Building</p>
+                    <ul class="space-y-2 text-sm mb-6">
+                        <li><i class="fas fa-check mr-2"></i>Science</li>
+                        <li><i class="fas fa-check mr-2"></i>Mathematics</li>
+                        <li><i class="fas fa-check mr-2"></i>Concept Building</li>
+                    </ul>
+                    <button class="w-full py-2 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition">View Details</button>
+                </div>
+
+                <!-- 10th SSC -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 p-8 text-white hover:shadow-2xl transition transform hover:-translate-y-1">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-white opacity-10 rounded-full"></div>
+                    <h3 class="text-2xl font-bold mb-2">10th SSC</h3>
+                    <p class="text-purple-100 mb-4">Board Preparation</p>
+                    <ul class="space-y-2 text-sm mb-6">
+                        <li><i class="fas fa-check mr-2"></i>Science</li>
+                        <li><i class="fas fa-check mr-2"></i>Mathematics</li>
+                        <li><i class="fas fa-check mr-2"></i>Crash Courses</li>
+                    </ul>
+                    <button class="w-full py-2 bg-white text-purple-600 rounded-lg font-semibold hover:bg-purple-50 transition">View Details</button>
+                </div>
+
+                <!-- 11th Science -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-600 p-8 text-white hover:shadow-2xl transition transform hover:-translate-y-1">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-white opacity-10 rounded-full"></div>
+                    <h3 class="text-2xl font-bold mb-2">11th Science</h3>
+                    <p class="text-emerald-100 mb-4">FYJC Preparation</p>
+                    <ul class="space-y-2 text-sm mb-6">
+                        <li><i class="fas fa-check mr-2"></i>Physics</li>
+                        <li><i class="fas fa-check mr-2"></i>Chemistry</li>
+                        <li><i class="fas fa-check mr-2"></i>Maths/Bio</li>
+                    </ul>
+                    <button class="w-full py-2 bg-white text-emerald-600 rounded-lg font-semibold hover:bg-emerald-50 transition">View Details</button>
+                </div>
+
+                <!-- 12th Science -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-rose-500 to-rose-600 p-8 text-white hover:shadow-2xl transition transform hover:-translate-y-1">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-white opacity-10 rounded-full"></div>
+                    <h3 class="text-2xl font-bold mb-2">12th Science</h3>
+                    <p class="text-rose-100 mb-4">HSC + Entrance</p>
+                    <ul class="space-y-2 text-sm mb-6">
+                        <li><i class="fas fa-check mr-2"></i>PCM/PCB</li>
+                        <li><i class="fas fa-check mr-2"></i>JEE/NEET Prep</li>
+                        <li><i class="fas fa-check mr-2"></i>CET Special</li>
+                    </ul>
+                    <button class="w-full py-2 bg-white text-rose-600 rounded-lg font-semibold hover:bg-rose-50 transition">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section id="faculty" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Meet Our Expert Faculty</h2>
+                <p class="text-lg text-gray-600">Learn from the best educators in Kandivali with proven track records</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Kavita Tiwari -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group">
+                    <div class="h-64 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition"></div>
+                        <i class="fas fa-user-graduate text-6xl text-white/80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Kavita Tiwari</h3>
+                        <p class="text-primary font-semibold mb-3">Physics Expert</p>
+                        <p class="text-gray-600 text-sm mb-4">Specialized in conceptual physics teaching with 8+ years of experience preparing students for JEE and board exams.</p>
+                        <div class="flex gap-3">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">Physics</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">JEE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sonu Jha -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group">
+                    <div class="h-64 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition"></div>
+                        <i class="fas fa-dna text-6xl text-white/80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Sonu Jha</h3>
+                        <p class="text-secondary font-semibold mb-3">Biology Specialist</p>
+                        <p class="text-gray-600 text-sm mb-4">Expert in Botany and Zoology with unique teaching methodologies for NEET preparation and board excellence.</p>
+                        <div class="flex gap-3">
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">Biology</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-semibold">NEET</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gaurav Prajapati -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group">
+                    <div class="h-64 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition"></div>
+                        <i class="fas fa-calculator text-6xl text-white/80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Gaurav Prajapati</h3>
+                        <p class="text-purple-600 font-semibold mb-3">Mathematics Guru</p>
+                        <p class="text-gray-600 text-sm mb-4">Making complex mathematics simple with practical problem-solving approaches for all competitive exams.</p>
+                        <div class="flex gap-3">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">Maths</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">IIT-JEE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shubham -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group">
+                    <div class="h-64 bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition"></div>
+                        <i class="fas fa-flask text-6xl text-white/80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Shubham</h3>
+                        <p class="text-amber-600 font-semibold mb-3">Chemistry Wizard</p>
+                        <p class="text-gray-600 text-sm mb-4">Specializing in Organic, Inorganic and Physical Chemistry with focus on concept clarity and exam strategies.</p>
+                        <div class="flex gap-3">
+                            <span class="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-semibold">Chemistry</span>
+                            <span class="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-semibold">HSC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Everything You Need to Excel</h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center text-primary flex-shrink-0">
+                                <i class="fas fa-book-open text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-1">Comprehensive Study Material</h3>
+                                <p class="text-gray-600">Customized notes, practice sheets, and previous years' papers curated by our expert faculty.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-secondary flex-shrink-0">
+                                <i class="fas fa-question-circle text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-1">Doubt Solving Sessions</h3>
+                                <p class="text-gray-600">Daily doubt clearing sessions ensuring no concept remains unclear.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center text-accent flex-shrink-0">
+                                <i class="fas fa-chart-line text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-1">Performance Tracking</h3>
+                                <p class="text-gray-600">Regular tests with detailed analysis and parent-teacher meetings.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Classroom" class="rounded-2xl shadow-2xl">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl max-w-xs">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-sm font-bold text-gray-900">4.9/5</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">"PhysicsHub transformed my understanding of Physics. Kavita ma'am's teaching is exceptional!"</p>
+                        <p class="text-sm font-bold text-gray-900 mt-2">- Aditya, 12th Science</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Start Your Success Journey Today</h2>
+                    <p class="text-gray-400 text-lg mb-8">Visit our Kandivali center or contact us for a free demo class. Limited seats available for the new batch.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-primary">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Location</p>
+                                <p class="text-gray-400">Kandivali West, Mumbai, Maharashtra</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-secondary">
+                                <i class="fas fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Phone</p>
+                                <p class="text-gray-400">+91 98765 43210</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-accent">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <p class="text-gray-400">info@physicshub.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 text-gray-900">
+                    <h3 class="text-2xl font-bold mb-6">Enquire Now</h3>
+                    <form class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you for your enquiry! We will contact you soon.');">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Student Name</label>
+                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" placeholder="Enter name" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" placeholder="Enter phone" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" placeholder="Enter email">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Standard</label>
+                            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition">
+                                <option>Select Standard</option>
+                                <option>8th Standard</option>
+                                <option>9th Standard</option>
+                                <option>10th Standard</option>
+                                <option>11th Science</option>
+                                <option>12th Science</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 bg-primary text-white font-bold rounded-lg hover:bg-indigo-700 transition shadow-lg">
+                            Send Enquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white font-bold">
+                            P
+                        </div>
+                        <span class="text-xl font-bold text-white">physics<span class="text-primary">Hub</span></span>
+                    </div>
+                    <p class="text-sm leading-relaxed max-w-sm">
+                        Premier coaching institute in Kandivali dedicated to academic excellence in Science and Mathematics for students from 8th to 12th standard.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#courses" class="hover:text-white transition">Courses</a></li>
+                        <li><a href="#faculty" class="hover:text-white transition">Faculty</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Subjects</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Physics</a></li>
+                        <li><a href="#" class="hover:text-white transition">Chemistry</a></li>
+                        <li><a href="#" class="hover:text-white transition">Mathematics</a></li>
+                        <li><a href="#" class="hover:text-white transition">Biology</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm">&copy; 2024 PhysicsHub. All rights reserved.</p>
+                <p class="text-sm">Designed with <i class="fas fa-heart text-red-500 mx-1"></i> in Kandivali</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
